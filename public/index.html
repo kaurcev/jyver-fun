@@ -17,6 +17,21 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyD1rgYNB1XkSfY-T-LH3pSmMc1jkK5813A",
+        authDomain: "kaurcev-space.firebaseapp.com",
+        projectId: "kaurcev-space",
+        storageBucket: "kaurcev-space.appspot.com",
+        messagingSenderId: "100540618242",
+        appId: "1:100540618242:web:2e703a2ee7c3a345c8f91b",
+        measurementId: "G-CGBHGWS1GT"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <script type="text/javascript" >
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();
