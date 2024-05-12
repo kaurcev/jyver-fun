@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from '../components/header/component';
 import Footer from '../components/footer/component';
 
 export default function E404Page() {
@@ -9,7 +8,6 @@ export default function E404Page() {
     }, [])
     return (
         <>
-        <Header />
         <main>
             <h1>404</h1>
             <p>Страница не найдена</p>
