@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../components/footer/component';
+import { Link } from 'react-router-dom';
 import boosty from '../images/boosty.svg'
 import discord from '../images/discord.svg'
-import { Link } from 'react-router-dom';
 
 
 export default function HomePage() {
@@ -18,70 +18,45 @@ export default function HomePage() {
     const moneyHandler = (event) => {
         setMoney(event.target.value);
     };
-
+    const message = (text) =>{
+        alert(text);
+    }
 
     return (
         <>
+        <div className='hello'>
+            <div className='content'>
+                <div className='logo'>
+                    <h1>JYVER FUN</h1>
+                    <p>Занимаемся разработкой универсальной площадки для разработчиков</p>
+                </div>
+                <Link className='full' onClick={() => message("Проект находится в разработке")} to="#">Попробовать</Link>
+                <Link className='nfull' onClick={() => message("Проект находится в разработке")} to="#">Помочь</Link>
+                <p className='mini'>*Проект находится в разработке</p>
+            </div>
+        </div>
         <main>
-            <h1>Jyver Fun!</h1>
-            <p>Проект находится в разработке!</p>
-            <h2>Что мы создаём?</h2>
-            <div className='duo'>
-                <div className='center'>
-                <p>Jyver Fun!</p>
-                </div>
-                <div>
-                    <h3>Вы простой пользователь?</h3>
-                    <ul>
-                        <li>Вы сможете создать собственную страницу</li>
-                        <li>Вы сможете найти интересные проекты и подписаться на них</li>
-                        <li>Вы можете найти себе комьюнити</li>
-                    </ul>
-                    <h3>Вы руководитель проекта?</h3>
-                    <ul>
-                        <li>Создайте персональную страницу проекта</li>
-                        <li>Создавайте новости вашего проекта</li>
-                        <li>Используйте наши программные решения для организации работы в команде</li>
-                        <li>Принимайте помощь от ваших фанатов</li>
-                    </ul>
-                    <h3>Вы эксперт своего дела?</h3>
-                    <ul>
-                        <li>Пишите информационные статьи для тех, кто только начинает свой путь в вашей сфере</li>
-                        <li>Давайте советы для разработчиков</li>
-                        <li>Получите знаки отличия в нашей площадке</li>
-                    </ul>
-                </div>
-            </div>
-            <h2>Особенность нашей площадки</h2>
-            <p>Посмотрите на предлагаемые нами возможности</p>
-            <div className='duo reverse'>
-                <div className='center'>
-                <p>Jyver Fun!</p>
-                </div>
-                <div>
-                    <h3>Что даст Вам наша площадка?</h3>
-                    <ul>
-                        <li>Вы даём вам возможность интеграции новостной ленты на ваши сайты. Вам будет предложено API, где вы можете писать о своих
-                            новостях внутри вашего проекта и интегрировать их в разные сферы
-                        </li>
-                        <li>Благодаря интеграции yoomoney вы сможете получать поддержку вашим проектам от ваших поклоников</li>
-                        <li>Наши программные решения позволят Вам собрать все связанное с вашим проектом в одном месте и обеспечить контроль работы над проектом</li>
-                        <li>Наша платформа интегрируется с VK и Telegram - просто запустите VK Mini App или Telegram App для работы с нашей площадкой</li>
-                    </ul>
-                </div>
-            </div>
+        <h2>Что мы создаём?</h2>
+        <h3>Что могут лидеры проектов</h3>
+        <p>Лидеры проектов нашей универсальной площадки имеют возможность создавать персональные страницы для своих проектов. Это позволяет им обеспечить сотрудничество с разработчиками, собрать все ресурсы, связанные с проектом, в одном удобном интерфейсе. Благодаря интеграции с платежной системой YooMoney, лидеры проектов также могут получать финансовую поддержку от своих преданных фанатов. Если необходимо, они могут также использовать платформу для поиска дополнительных разработчиков, которые присоединятся к проекту.</p>
+        <h3>Что могут пользователи</h3>
+        <p>Пользователи нашей платформы имеют возможность следить за проектами, которые их интересуют, в удобной новостной ленте. Они также могут создавать персональные заявки для поиска команды и присоединения к работе над проектами. Это позволяет пользователям найти подходящие проекты и внести свой вклад в разработку.</p>
             <h3>Мы прислушиваемся к Вам</h3>
-            <p> Если у вас есть свои предложения/рекомендации, можете сказать нам и мы услышим вас</p>
-            <div className='duo social'>
-                <Link to="//boosty.to/kaurcev">
-                    <img src={boosty} alt="boosty" />
-                </Link>
-                <Link to="//discord.gg/aeZNnpkgxu">
-                    <img src={discord} alt="discord" />
-                </Link>
-            </div>
-            <div className='duo reverse'>
-                <div className='center'>
+                <ul>
+                    <li>В Discord вы можете связаться с разработчиками</li>
+                    <li>На Boosty вы можете поддержать главного разработчика</li>
+                </ul>
+                <div className='duo social'>
+                        <Link to="//discord.gg/aeZNnpkgxu">
+                            <img src={discord} alt="discord" />
+                        </Link>
+                        <Link to="//boosty.to/kaurcev">
+                            <img src={boosty} alt="boosty" />
+                        </Link>
+                </div>
+                <p>Если у вас есть свои предложения/рекомендации, можете сказать нам и мы услышим вас</p>
+                <h3>Ранняя поддержка</h3>
+                <p>Через форму ниже вы можете поддержать проект</p>
                 <form method="POST" action="https://yoomoney.ru/quickpay/confirm">
                     <input type="hidden" name="receiver" value={cart}/>
                     <input type="hidden" name="label" value="$order_id"/>
@@ -92,18 +67,8 @@ export default function HomePage() {
                         <label><input type="radio" name="paymentType" value="PC"/>ЮMoney</label>
                         <label><input type="radio" name="paymentType" value="AC"/>Банковской картой</label>
                     </div>
-                    <input type="submit" value="Перевести"/>
+                    <input type="submit" value="Поддержать"/>
                 </form>
-                </div>
-                <div>
-                <h2>Поддержка проекта на раннем этапе</h2>
-                <p>Вы можете помочь нам ещё на раннем этапе</p>
-                </div>
-            </div>
-            <div>
-    </div>
-
-
         </main>
         <Footer />
         </>
